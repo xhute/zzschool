@@ -1,0 +1,38 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/main/main",
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/member/member",
+    "pages/help/help"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/member/member",
+        "text": "成员"
+      },
+      {
+        "pagePath": "pages/help/help",
+        "text": "帮助"
+      }
+    ]
+  }
+}

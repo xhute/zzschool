@@ -1,0 +1,54 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"appid": "wx98f9fd82a5ebf0b7",
+	"projectname": "zzschool",
+	"libVersion": "2.2.5",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "1044",
+					"pathName": "pages/main/main",
+					"query": "",
+					"scene": "1044",
+					"shareInfo": {
+						"groupName": "测试模拟群2",
+						"shareName": "xp44aqjYTAzmMw24VCEG5ExIGlTX5CEGlPTpfAA0Ps0@cr4dev",
+						"shareKey": "4j-Wa1slaplX4kzc_IXJ6Cjf61HhfSMYcImlbhQCWOWMU5G8AxF2D5G_YkbnmNwIKtGUwp1AECaLSDulHXlevw~~"
+					}
+				}
+			]
+		}
+	}
+}
