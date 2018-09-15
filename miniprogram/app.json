@@ -2,13 +2,6 @@
   "cloud": true,
   "pages": [
     "pages/main/main",
-    "pages/index/index",
-    "pages/userConsole/userConsole",
-    "pages/storageConsole/storageConsole",
-    "pages/databaseGuide/databaseGuide",
-    "pages/addFunction/addFunction",
-    "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib",
     "pages/member/member",
     "pages/help/help"
   ],

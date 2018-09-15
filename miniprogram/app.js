@@ -2,6 +2,7 @@
 App({
   onLaunch: function (opt) {
     console.log(opt)
+    // 如何是群分享的，获取群信息
     if (opt.shareTicket) {
       wx.getShareInfo({
         shareTicket: opt.shareTicket,

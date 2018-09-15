@@ -1,4 +1,4 @@
-# 云开发 quickstart
+<!-- # 云开发 quickstart
 
 这是云开发的快速启动指引，其中演示了如何上手使用云开发的三大基础能力：
 
@@ -9,4 +9,17 @@
 ## 参考文档
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
+ -->
 
+# 智智班级管理小程序
+
+为方便班主任管理班级，改进微信群的管理方式，尝试开发这个小程序
+目前还是一边学一边弄，很水，全当玩了
+
+
+## 云函数说明
+### login
+登陆演示
+### decrypt
+微信解密
+### 

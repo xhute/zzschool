@@ -1,6 +1,17 @@
 const WXBizDataCrypt = require('./WXBizDataCrypt')
 const requestSync = require('./requestSync')
-// 云函数入口函数
+
+/*
+传入参数
+{
+  data:{
+    js_code,
+    encryptedData,
+    iv
+  }
+}
+
+*/
 exports.main = async (event, context) => {
   const code = event.data.js_code
   const appid = event.userInfo.appId

@@ -22,6 +22,7 @@ WXBizDataCrypt.prototype.decryptData = function (encryptedData, iv) {
     decoded = JSON.parse(decoded)
 
   } catch (err) {
+    console.log('try err',err)
     throw new Error('Illegal Buffer1')
   }
 
