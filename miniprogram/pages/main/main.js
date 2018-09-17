@@ -68,16 +68,5 @@ Page({
 
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function (opt) {
-    console.log(opt)
-    wx.showShareMenu({
-      withShareTicket:true
-    })
-    return {
-      title:'my share'
-    }
-  }
+
 })

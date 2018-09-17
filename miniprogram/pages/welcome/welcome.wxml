@@ -1,2 +1,14 @@
-<!--miniprogram/pages/welcome/welcome.wxml-->
-<text>miniprogram/pages/welcome/welcome.wxml</text>
+<!-- miniprogram/pages/welcome/welcome.wxml -->
+<view class='container'>
+    <view>欢迎使用智智班级管理</view>
+    <view>分享到班级群，请班主任或管理员，在群内打开，创建班级</view>
+    <button open-type="share">分享到班级群</button>
+    <view>如果你已经加入过某个班级，请登陆</view>
+    <!-- 用户 openid -->
+    <view class="userinfo">
+        <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar" style="background-image: url({{avatarUrl}})"></button>
+        <view>
+            <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
+        </view>
+    </view>
+</view>

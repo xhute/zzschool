@@ -2,13 +2,14 @@
 App({
   onLaunch: function (opt) {
     console.log(opt)
-    // 如何是群分享的，获取群信息
+    // 如果是群分享的，获取群信息
     if (opt.shareTicket) {
       wx.getShareInfo({
         shareTicket: opt.shareTicket,
         success: shareInfo => {
           wx.login({
             success: loginInfo => {
+              console.log('loginfo',loginInfo)
               wx.cloud.callFunction({
                 name: 'decrypt',
                 data: {
@@ -21,9 +22,9 @@ App({
                 success: cloudFunInfo => {
                   console.log(cloudFunInfo.result)
                   this.globalData.openGId = cloudFunInfo.result.openGId
-                  wx.reLaunch({
-                    url: '/pages/help/help'
-                  })
+                  // wx.reLaunch({
+                  //   url: '/pages/help/help'
+                  // })
                 },
                 fail: err => {
                   console.log('callFunction err:', err)
