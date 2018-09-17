@@ -1,33 +1,58 @@
 //app.js
 App({
   onLaunch: function (opt) {
+    var that = this
     console.log(opt)
     // 如果是群分享的，获取群信息
     if (opt.shareTicket) {
       wx.getShareInfo({
         shareTicket: opt.shareTicket,
         success: shareInfo => {
-          wx.login({
-            success: loginInfo => {
-              console.log('loginfo',loginInfo)
+          wx.checkSession({
+            success: function () {
               wx.cloud.callFunction({
                 name: 'decrypt',
                 data: {
                   data: {
-                    js_code: loginInfo.code,
                     encryptedData: shareInfo.encryptedData,
                     iv: shareInfo.iv
                   }
                 },
                 success: cloudFunInfo => {
-                  console.log(cloudFunInfo.result)
-                  this.globalData.openGId = cloudFunInfo.result.openGId
-                  // wx.reLaunch({
-                  //   url: '/pages/help/help'
-                  // })
+                  console.log('cloudFunction', cloudFunInfo)
+                  that.globalData.openGId = cloudFunInfo.result.openGId
+                  console.log('openGId', that.globalData.openGId)
                 },
                 fail: err => {
                   console.log('callFunction err:', err)
+                }
+              })
+            },
+            fail: function () {
+              wx.login({
+                success: loginInfo => {
+                  console.log('loginfo', loginInfo)
+                  wx.cloud.callFunction({
+                    name: 'decrypt',
+                    data: {
+                      data: {
+                        js_code: loginInfo.code,
+                        encryptedData: shareInfo.encryptedData,
+                        iv: shareInfo.iv
+                      }
+                    },
+                    success: cloudFunInfo => {
+                      console.log('cloudFunction', cloudFunInfo)
+                      that.globalData.openGId = cloudFunInfo.result.openGId
+                      console.log('openGId', that.globalData.openGId)
+                      // wx.reLaunch({
+                      //   url: '/pages/help/help'
+                      // })
+                    },
+                    fail: err => {
+                      console.log('callFunction err:', err)
+                    }
+                  })
                 }
               })
             }
