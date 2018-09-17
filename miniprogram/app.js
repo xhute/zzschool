@@ -20,6 +20,10 @@ App({
                 },
                 success: cloudFunInfo => {
                   console.log(cloudFunInfo.result)
+                  this.globalData.openGId = cloudFunInfo.result.openGId
+                  wx.reLaunch({
+                    url: '/pages/help/help'
+                  })
                 },
                 fail: err => {
                   console.log('callFunction err:', err)

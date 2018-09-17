@@ -1,3 +1,4 @@
 <!--miniprogram/pages/main/main.wxml-->
 <text>aaa{{scene}}</text>
 <button open-type='share'>share me</button>
+<open-data type="groupName" open-gid="{{openGId}}" />

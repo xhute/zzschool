@@ -1,29 +1,18 @@
-// miniprogram/pages/main/main.js
-
-const app = getApp()
-
+// miniprogram/pages/welcome/welcome.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    scene:0,
-    openGId:''
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // wx.navigateTo({
-    //   url: '../index/index',
-    // })
-    console.log(app.globalData)
-    this.setData({
-      scene : app.globalData.scene
-    })
-    //this.data.scene = app.globalData.scene
+
   },
 
   /**
@@ -71,13 +60,7 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function (opt) {
-    console.log(opt)
-    wx.showShareMenu({
-      withShareTicket:true
-    })
-    return {
-      title:'my share'
-    }
+  onShareAppMessage: function () {
+
   }
 })

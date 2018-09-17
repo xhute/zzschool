@@ -1,6 +1,7 @@
 {
   "cloud": true,
   "pages": [
+    "pages/welcome/welcome",
     "pages/main/main",
     "pages/member/member",
     "pages/help/help"

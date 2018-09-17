@@ -39,7 +39,7 @@
 				{
 					"id": 1,
 					"name": "1044",
-					"pathName": "pages/main/main",
+					"pathName": "pages/welcome/welcome",
 					"query": "",
 					"scene": "1044",
 					"shareInfo": {
