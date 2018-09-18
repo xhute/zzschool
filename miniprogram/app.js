@@ -10,10 +10,14 @@ App({
         success: shareInfo => {
           wx.checkSession({
             success: function () {
+              
+              var js_code = wx.getStorageSync('js_code')
+              console.log('has session',js_code)
               wx.cloud.callFunction({
                 name: 'decrypt',
                 data: {
                   data: {
+                   js_code:js_code,
                     encryptedData: shareInfo.encryptedData,
                     iv: shareInfo.iv
                   }
@@ -31,7 +35,8 @@ App({
             fail: function () {
               wx.login({
                 success: loginInfo => {
-                  console.log('loginfo', loginInfo)
+                  wx.setStorage({key:'js_code',data:loginInfo.code})
+                  console.log('wx.login',loginInfo)
                   wx.cloud.callFunction({
                     name: 'decrypt',
                     data: {
